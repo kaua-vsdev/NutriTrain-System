@@ -33,39 +33,34 @@ public static void main(String []args){
 
     if(Usu.getIdade() < 16){
         System.out.println("Idade para cadastro não permitida, necessário maior de 16!!");
-    } else if(Usu.getIdade() > 15){ //O restante do cadastro é feito somente com a validação da idaded
+    } else if(Usu.getIdade() > 15){ //O restante do cadastro é feito somente com a validação da idade
         System.out.println("Digite seu peso: ");
         Usu.setPeso(sc.nextDouble());
+
         do{
-        if(Usu.getPeso() <= 0){
+        if(Usu.getPeso() <= 10){
             System.out.println("ERRO!!");
             System.out.println("Digite novamente");
-            Usu.setPeso(sc.nextDouble());
-        } else if(Usu.getPeso() < 20){
-            System.out.println("Confirma esse peso? (Sim/Não)");
-            String Confirm = sc.nextLine();
-            boolean confirma = Confirm.equalsIgnoreCase("Sim");
-            
-            
-            if(confirma == true){
-                System.out.println("Digite novamente, por gentileza");
-                Usu.setPeso(sc.nextDouble());
-                System.out.println("Cadastrado");
-            }
-            
-        }
-    } while(Usu.getPeso() <= 0 || Usu.getPeso() < 20);//Caso o peso seja menor que zero, ele pede novamente
+            Usu.setPeso(sc.nextDouble());  
+        } 
+    } while(Usu.getPeso() <= 0);//Caso o peso seja menor que zero, ele pede novamente
 
         System.out.println("Digite sua altura (cm)");
         Usu.setAltura(sc.nextDouble());
         do{
-        if(Usu.getAltura() <= 0){
+        if(Usu.getAltura() <= 50){
             System.out.println("ERRO!!");
             System.out.println("Digite novamente");
             Usu.setAltura(sc.nextDouble());
-        }
+        } 
     } while(Usu.getAltura() <= 0);
+
     }
-   
+    
+    System.out.println("=====================");
+    System.out.println("Usúario cadastrado!!");
+    System.out.println("=====================");
+
+    
     }
 }
