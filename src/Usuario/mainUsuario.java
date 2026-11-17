@@ -1,23 +1,38 @@
-package usuario;
+package Usuario;
 
 import java.util.Scanner;
 import login.login;
 import login.mainLogin;
+import calculadoraTMB.CalcularTMB;
 
 public class mainUsuario {
         public static void main(String []args){
         Scanner sc = new Scanner(System.in);
-        mainLogin Meulogin = new mainLogin();
+        mainLogin Usu = login.cadastrar(sc);
+        if(Usu == null){
+            return;
+        }
+        int opcao;
+        do{
+            System.out.println("1 - Verificar TMB");
+            System.out.println("2 - Verificar dados do Usúario");
+            System.out.println("3 - Sair");
 
-        System.out.println("BEM-VINDO AO NUTRITRAIN");
-        System.out.println("1 - Calcular TMB");
-        System.out.println("2 - Consultar dados");
-        System.out.println("3 - Sair");
+             opcao = sc.nextInt();
 
-int opcao = sc.nextInt();
+            switch (opcao) {
+             case 1:
+            double tmb = CalcularTMB.calcular(
+            Usu.getPeso(),
+            Usu.getAltura(),
+            Usu.getIdade(),
+            Usu.getSexo());
 
+    System.out.println("------- Tabela Taxa de metabolismo Basal -------");
+    System.out.printf("Sua TMB é de %.2f kcal/dia%n", tmb);
+    break;
+            }
 
-
-
+        }   while(opcao != 3);
     }
 }

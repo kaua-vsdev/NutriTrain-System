@@ -4,12 +4,11 @@ import java.util.Locale;
 import java.util.Scanner;
 
 import calculadoraTMB.CalcularTMB;
-import usuario.mainUsuario;
-import usuario.usuario;
+import Usuario.mainUsuario;
+import Usuario.Usuario;
 
 public class login{
-public static void main(String []args){
-    Scanner sc = new Scanner(System.in);
+public static mainLogin cadastrar(Scanner sc){
     Locale.setDefault(Locale.US);
 
     mainLogin Usu = new mainLogin();
@@ -69,19 +68,16 @@ public static void main(String []args){
     } else if(sexo.equalsIgnoreCase("F")){
         System.out.println("Feminino");
     }
+    
+    Usu.setSexo(sexo);
     }
+
     
     System.out.println("=====================");
     System.out.println("Usúario cadastrado!!");
     System.out.println("=====================");
 
-
-    double resultado = CalcularTMB.calculatormifflinstjeor(
-    Usu.getPeso(),
-    Usu.getAltura(),
-    Usu.getIdade(),
-    Usu.getSexo()
-);
+    return Usu;
 
     }
 }
