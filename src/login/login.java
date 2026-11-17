@@ -1,12 +1,18 @@
+package login;
+
 import java.util.Locale;
 import java.util.Scanner;
+
+import calculadoraTMB.CalcularTMB;
+import usuario.mainUsuario;
+import usuario.usuario;
 
 public class login{
 public static void main(String []args){
     Scanner sc = new Scanner(System.in);
     Locale.setDefault(Locale.US);
 
-    Usuario Usu = new Usuario();
+    mainLogin Usu = new mainLogin();
 
     System.out.println("==================================");
     System.out.println("Seja Bem-Vindo ao NutriTrain System");
@@ -55,12 +61,27 @@ public static void main(String []args){
         } 
     } while(Usu.getAltura() <= 0);
 
+    System.out.println("Digite seu sexo (M/F)");
+    String sexo = sc.next();
+
+    if(sexo.equalsIgnoreCase("M")){
+        System.out.println("Masculino");
+    } else if(sexo.equalsIgnoreCase("F")){
+        System.out.println("Feminino");
+    }
     }
     
     System.out.println("=====================");
     System.out.println("Usúario cadastrado!!");
     System.out.println("=====================");
 
-    
+
+    double resultado = CalcularTMB.calculatormifflinstjeor(
+    Usu.getPeso(),
+    Usu.getAltura(),
+    Usu.getIdade(),
+    Usu.getSexo()
+);
+
     }
 }
