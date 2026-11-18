@@ -62,11 +62,11 @@ public static void main(String []args){
     } while(Usu.getAltura() <= 0);
 
     System.out.println("Digite seu sexo (M/F)");
-    String sexo = sc.next();
+    Usu.setSexo(sc.next());
 
-    if(sexo.equalsIgnoreCase("M")){
+    if(Usu.getSexo().equalsIgnoreCase("M")){
         System.out.println("Masculino");
-    } else if(sexo.equalsIgnoreCase("F")){
+    } else if(Usu.getSexo().equalsIgnoreCase("F")){
         System.out.println("Feminino");
     }
     }
@@ -74,8 +74,7 @@ public static void main(String []args){
     System.out.println("=====================");
     System.out.println("Usúario cadastrado!!");
     System.out.println("=====================");
-
-
+    
     double resultado = CalcularTMB.calculatormifflinstjeor(
     Usu.getPeso(),
     Usu.getAltura(),
