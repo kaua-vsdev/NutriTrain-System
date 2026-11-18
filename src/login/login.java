@@ -29,7 +29,6 @@ public static mainLogin cadastrar(Scanner sc){
 
     } while(Usu.getNome() == null || Usu.getNome().trim().isEmpty());
 
-    System.out.println("Nome: " + Usu.getNome());
     //Esse bloco verifica se o nome foi iserido
 
     System.out.println("Digite sua idade: ");

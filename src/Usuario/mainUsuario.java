@@ -16,6 +16,7 @@ public class mainUsuario {
         if(Usu == null){
             return;
         }
+        String dd = " ";
         int opcao;
         do{
             System.out.println("1 - Verificar TMB");
@@ -36,11 +37,12 @@ public class mainUsuario {
     System.out.printf("Sua TMB é de %.2f kcal/dia%n", tmb);
     break;
             case 2:
-                double dd = mainDados.Dados(
+                mainDados.Dados(
                 Usu.getNome(),
                 Usu.getPeso(),
                 Usu.getAltura(),
-                Usu.getIdade());
+                Usu.getIdade(),
+                Usu.getSexo());
                 System.out.println(dd);
     break;
             }
