@@ -6,6 +6,7 @@ public class mainLogin{
     private double peso;
     private double altura;
     private String sexo;
+    private int atividade;
 
     public String getNome() {
         return nome;
@@ -47,5 +48,12 @@ public class mainLogin{
         this.sexo = sexo;
     }
 
+    public int getAtividade() {
+        return atividade;
+    }
+
+    public void setAtividade(int atividade) {
+        this.atividade = atividade;
+    }
     
 }

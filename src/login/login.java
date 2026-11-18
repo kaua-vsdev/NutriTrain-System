@@ -48,7 +48,7 @@ public static mainLogin cadastrar(Scanner sc){
         } 
     } while(Usu.getPeso() <= 0);//Caso o peso seja menor que zero, ele pede novamente
 
-        System.out.println("Digite sua altura (cm)");
+        System.out.println("Digite sua altura(cm)");
         Usu.setAltura(sc.nextDouble());
         do{
         if(Usu.getAltura() <= 50){
@@ -67,7 +67,12 @@ public static mainLogin cadastrar(Scanner sc){
         System.out.println("Feminino");
     }
     
-  
+    System.out.println("Digite seu nivel de atividade fisica: ");
+    System.out.println("Sedentario - 1");
+    System.out.println("Ligeiramente ativo  - 2");
+    System.out.println("Moderadamente ativo - 3");
+    System.out.println("Muito ativo  - 4");
+    Usu.setAtividade(sc.nextInt());
     }
 
     

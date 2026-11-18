@@ -5,6 +5,7 @@ import login.login;
 import login.mainLogin;
 import calculadoraTMB.CalcularTMB;
 import dados.mainDados;
+import calcularTDEE.CalcularTDEE;
 
 public class mainUsuario {
         public static void main(String []args){
@@ -21,7 +22,8 @@ public class mainUsuario {
         do{
             System.out.println("1 - Verificar TMB");
             System.out.println("2 - Verificar dados do Usúario");
-            System.out.println("3 - Sair");
+            System.out.println("3 - TDEE");
+            System.out.println("4 - Sair");
 
              opcao = sc.nextInt();
 
@@ -42,11 +44,26 @@ public class mainUsuario {
                 Usu.getPeso(),
                 Usu.getAltura(),
                 Usu.getIdade(),
-                Usu.getSexo());
+                Usu.getSexo(),
+                Usu.getAtividade());
                 System.out.println(dd);
+    break;
+            case 3:
+                double TDEE = CalcularTDEE.tdee(
+                Usu.getPeso(),
+                Usu.getAltura(),
+                Usu.getIdade(),
+                Usu.getSexo(),
+                Usu.getAtividade());
+                System.out.println("Seu TDEE é: " + TDEE);
+                System.out.println("------- Tabela Gasto Energético Diário Total -------");
+                System.out.printf("Seu TDEE é de %.2f%n", TDEE);
+    break;
+            case 4:
+                System.out.println("Saiu!!");
     break;
             }
 
-        }   while(opcao != 3);
+        }   while(opcao != 4);
     }
 }
