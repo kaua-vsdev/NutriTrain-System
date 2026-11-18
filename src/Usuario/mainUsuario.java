@@ -55,12 +55,17 @@ public class mainUsuario {
                 Usu.getIdade(),
                 Usu.getSexo(),
                 Usu.getAtividade());
-                System.out.println("Seu TDEE é: " + TDEE);
                 System.out.println("------- Tabela Gasto Energético Diário Total -------");
-                System.out.printf("Seu TDEE é de %.2f%n", TDEE);
+                System.out.printf("Seu TDEE é de %.2f kcal/dia%n", TDEE);
+                System.out.println("------- Para obter Déficit calórico --------");
+                double Deficit = TDEE - 300;
+                System.out.printf("Seu Deficit é de %.2f kcal/dia%n", Deficit);
+                System.out.println("------- Para obter Superávit calórico --------");
+                double Superavit = TDEE + 200;
+                System.out.printf("Seu superávit é de %.2f kcal/dia%n", Superavit);
     break;
             case 4:
-                System.out.println("Saiu!!");
+                System.out.println("Obrigado por utilizar nosso sistema!!");
     break;
             }
 

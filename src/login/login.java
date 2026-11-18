@@ -68,10 +68,11 @@ public static mainLogin cadastrar(Scanner sc){
     }
     
     System.out.println("Digite seu nivel de atividade fisica: ");
-    System.out.println("Sedentario - 1");
-    System.out.println("Ligeiramente ativo  - 2");
-    System.out.println("Moderadamente ativo - 3");
-    System.out.println("Muito ativo  - 4");
+    System.out.println("Sedentario (pouco ou nenhum exercicio, trabalho sentado) - 1");
+    System.out.println("Ligeiramente ativo (1 a 3 dias de exericio) - 2");
+    System.out.println("Moderadamente ativo (3 a 5 dias de exericio) - 3");
+    System.out.println("Muito ativo (6 a 7 dias de exercicio)- 4");
+    System.out.println("Extremamente ativo (Treino pesado diario ou trabalho fisico intenso) - 5");
     Usu.setAtividade(sc.nextInt());
     }
 
