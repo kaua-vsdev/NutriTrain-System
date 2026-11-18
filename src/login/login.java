@@ -67,7 +67,9 @@ public static mainLogin cadastrar(Scanner sc){
         System.out.println("Feminino");
     }
     
+    System.out.println("-------------------------------------------------");
     System.out.println("Digite seu nivel de atividade fisica: ");
+    System.out.println("----------------------------------------------------");
     System.out.println("Sedentario (pouco ou nenhum exercicio, trabalho sentado) - 1");
     System.out.println("Ligeiramente ativo (1 a 3 dias de exericio) - 2");
     System.out.println("Moderadamente ativo (3 a 5 dias de exericio) - 3");
